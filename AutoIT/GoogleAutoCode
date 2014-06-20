@@ -1,0 +1,10 @@
+ShellExecute("@site")
+AutoItSetOption("WinTitleMatchMode","2")
+WinWait("Untitled - Google Chrome")
+$title = WinGetTitle("Untitled - Google Chrome") ; retrives whole window title
+$UN=WinGetText($title,"User Name:")
+ControlSend($title,"",$UN,"demo");Sets Username
+$PWD=WinGetText($title,"Password:")
+Send("{TAB 1}")
+ControlSend($title,"",$PWD,"tools");Sets PWD
+Send("{ENTER}")
